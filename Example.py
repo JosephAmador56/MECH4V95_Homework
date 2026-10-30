@@ -2,6 +2,8 @@ import numpy as np
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import RBF
 import matplotlib.pyplot as plt
+import torch
+import sys
 
 def noisy_example():
     X = np.linspace(start=0, stop=10, num=1_000).reshape(-1, 1)
@@ -94,8 +96,12 @@ def example():
     plt.show()
 
 def main():
-    example()
-    noisy_example()
+    print("Python executable:", sys.executable)
+    print("PyTorch version:", torch.__version__)
+    print("PyTorch CUDA version:", torch.version.cuda)
+    print("CUDA available:", torch.cuda.is_available())
+    #example()
+    #noisy_example()
 
 if __name__ == "__main__":
     main()
