@@ -6,12 +6,12 @@ Python version: 3.14
 All random seeds were set to SEED = 2026
 
 There are 2 notebooks to run:
-1. homework_notebook
+1. homework_notebook (Exact GP)
     Produces the outputs for B1. The only changes necessary to reproduce each result is to set: subset = "n samples
      to use", alpha = "the specified multiplier found in the results table for each section", and restarts = "the
      number given in each results table title"
     Uncomment the save command in line 33 to write new csv files
-2. homework_notebook_B2
+2. homework_notebook_B2 (Scalable GP)
     Produces the outputs for B2. The only changes necessary to reproduce each result is to set: num_inducing_points =
      "number of inducing points"
     The noise for B2 was pulled from the status bar's final noise value that shows when training the model
@@ -34,4 +34,4 @@ for name, j in [("S1 val", S1["val"]), ("S1 test", S1["test"]), ("low-G test", L
 
 
 The CustomGraphs.xlsx file was used to generate the training time, calibration curve, predicted σ against absolute error
-figures
+, and mass flux vs. stddev figures
